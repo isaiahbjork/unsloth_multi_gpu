@@ -18,6 +18,7 @@ os.environ["HF_HOME"] = str(MODELS_DIR / "hf_cache")
 os.environ["HF_DATASETS_CACHE"] = str(MODELS_DIR / "datasets_cache")
 os.environ["TRANSFORMERS_CACHE"] = str(MODELS_DIR / "models_cache")
 os.environ["WANDB_API_KEY"] = ""
+os.environ["HF_TOKEN"] = ""
 
 from huggingface_hub import login
 from datasets import load_dataset, concatenate_datasets
@@ -29,6 +30,9 @@ from transformers import TrainingArguments
 from unsloth.chat_templates import get_chat_template
 import torch
 import torch.distributed as dist
+
+# Login to HuggingFace
+login(token=os.environ["HF_TOKEN"])
 
 # Set up distributed training
 def setup_ddp():
@@ -57,8 +61,7 @@ if torch.cuda.is_available() and torch.cuda.device_count() > 1:
 # Initialize distributed training
 rank, world_size, local_rank = setup_ddp()
 
-# Login to HuggingFace
-login(token="")
+
 
 # Model configuration
 base_model = "unsloth/Qwen3-8B"
