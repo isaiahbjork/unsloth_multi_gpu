@@ -6,6 +6,10 @@ Set `/path/to/unsloth_multi_gpu` in the unsloth_multi.py file.
 
 Set `os.environ["WANDB_API_KEY"]` and `os.environ["HF_TOKEN"]` in the unsloth_multi.py file.
 
+Set `export PYTHONPATH=/path/to/unsloth_multi_gpu:$PYTHONPATH` in the run.sh file.
+
+Set `dataset_name` to the name of the dataset you want to use in the unsloth_multi.py file.
+
 Set `NUM_GPUS` to the number of GPUs you want to use in the run.sh file.
 
 Install dependencies:

@@ -66,6 +66,7 @@ rank, world_size, local_rank = setup_ddp()
 # Model configuration
 base_model = "unsloth/Qwen3-8B"
 model_name = "finetuned-qwen3-8b"
+dataset_name = ""
 max_seq_length = 2048
 
 # Define base cache directory
@@ -76,7 +77,7 @@ if rank == 0:
     print("Loading dataset from HuggingFace...")
 
 # Load dataset
-dataset = load_dataset("", verification_mode="no_checks")
+dataset = load_dataset(dataset_name, verification_mode="no_checks")
 
 # Get the main split (usually 'train')
 main_split = list(dataset.keys())[0]
