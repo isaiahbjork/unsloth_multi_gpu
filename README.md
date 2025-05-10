@@ -1,4 +1,6 @@
-# WIP: Unsloth Multi-GPU Finetuning
+# Unsloth Multi-GPU Finetuning
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/isaiahbjork/unsloth_multi_gpu)
 
 Set `/path/to/unsloth_multi_gpu` in the unsloth_multi.py file.
 
