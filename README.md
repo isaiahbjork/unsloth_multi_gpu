@@ -26,5 +26,8 @@ chmod +x run.sh
 ./run.sh
 ```
 
+Still testing and might not work or crash.
+
+
 Need GPUs? Use my referral link on vast.ai:
 https://cloud.vast.ai/?ref_id=126744&creator_id=126744&name=cuda%3A12.0.1-devel-ubuntu20.04
